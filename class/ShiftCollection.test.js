@@ -1,9 +1,9 @@
 const ShiftCollection = require('./ShiftCollection');
-const shiftCollection = new ShiftCollection();
 
 describe('Shift Collection', () => {
 
     it('should have some ID', () => {
+        const shiftCollection = new ShiftCollection();
         shiftCollection
             .createShift({
                 gopherId: 0,
