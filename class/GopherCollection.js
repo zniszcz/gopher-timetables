@@ -1,6 +1,6 @@
 const Gopher = require('./Gopher');
 
-module.export = class GopherCollection {
+module.exports = class GopherCollection {
     constructor() {
         this.collection = [];
         this.gophersCounter = 0;
