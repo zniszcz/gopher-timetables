@@ -1,4 +1,4 @@
-module.exports = class Track {
+module.exports = class Plan {
     constructor() {
         this.tracks = [];
     }

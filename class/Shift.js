@@ -1,14 +1,24 @@
-const moment = require('moment');
+const Moment = require('moment');
+const MomentRange = require('moment-range');
+
+const moment = MomentRange.extendMoment(Moment);
 
 module.exports = class Shift {
-    constructor({id, gopherId, avalaibleFrom, avalaibleTo}) {
+    constructor({id, gopherId, from, to}) {
         this.id = id;
         this.gopherId = gopherId;
-        this.avalaibleFrom = avalaibleFrom;
-        this.avalaibleTo = avalaibleTo;
+        this.from = from;
+        this.to = to;
     }
 
     getId() {
         return this.id;
+    }
+
+    getRange() {
+        const from = moment(this.from);
+        const to = moment(this.to);
+
+        return moment.range(from, to);
     }
 };
